@@ -40,7 +40,7 @@ Users should reference the Court Listener docs for more information. According t
 
 ## Contributing
 
-Contributions are welcome! Please submit issues or pull requests on [GitHub](https://github.com/SpyderRex/court_listener).
+Contributions are welcome! Please submit issues or pull requests on [GitHub](https://github.com/SpyderRex/court-listener).
 
 ## License
 
@@ -49,3 +49,10 @@ Contributions are welcome! Please submit issues or pull requests on [GitHub](htt
 ## Contact
 
 For questions or support, please contact [billyjohnsonauthor@gmail.com](mailto:billyjohnsonauthor@gmail.com).
+
+## Documentation
+
+Check out the [docs](https://court-listener.readthedocs.io/en/latest/index.html)
+
+## DONATING
+If you wish to donate financially to this project, you can do so [here](https://www.paypal.com/donate/?hosted_button_id=N8HR4SN2J6FPG)
