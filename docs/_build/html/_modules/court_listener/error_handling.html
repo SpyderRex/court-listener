@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>court_listener.error_handling &mdash; court-listener 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            court-listener
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">court_listener</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">court-listener</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">court_listener.error_handling</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for court_listener.error_handling</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># Define error messages for specific HTTP status codes</span>
+<span class="n">HTTP_STATUS_MESSAGES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">400</span><span class="p">:</span> <span class="s2">&quot;Bad Request: The server could not understand the request.&quot;</span><span class="p">,</span>
+    <span class="mi">401</span><span class="p">:</span> <span class="s2">&quot;Unauthorized: Authentication is required or has failed.&quot;</span><span class="p">,</span>
+    <span class="mi">403</span><span class="p">:</span> <span class="s2">&quot;Forbidden: The server understands the request but refuses to authorize it.&quot;</span><span class="p">,</span>
+    <span class="mi">404</span><span class="p">:</span> <span class="s2">&quot;Not Found: The requested resource could not be found.&quot;</span><span class="p">,</span>
+    <span class="mi">405</span><span class="p">:</span> <span class="s2">&quot;Method Not Allowed: The method specified in the request is not allowed for the resource.&quot;</span><span class="p">,</span>
+    <span class="mi">408</span><span class="p">:</span> <span class="s2">&quot;Request Timeout: The server timed out waiting for the request.&quot;</span><span class="p">,</span>
+    <span class="mi">500</span><span class="p">:</span> <span class="s2">&quot;Internal Server Error: The server encountered an unexpected condition.&quot;</span><span class="p">,</span>
+    <span class="mi">502</span><span class="p">:</span> <span class="s2">&quot;Bad Gateway: The server received an invalid response from an upstream server.&quot;</span><span class="p">,</span>
+    <span class="mi">503</span><span class="p">:</span> <span class="s2">&quot;Service Unavailable: The server is currently unable to handle the request.&quot;</span><span class="p">,</span>
+    <span class="mi">504</span><span class="p">:</span> <span class="s2">&quot;Gateway Timeout: The server, while acting as a gateway, timed out waiting for an upstream server.&quot;</span>
+<span class="p">}</span>
+
+<div class="viewcode-block" id="handle_api_errors">
+<a class="viewcode-back" href="../../court_listener.html#court_listener.base.handle_api_errors">[docs]</a>
+<span class="k">def</span> <span class="nf">handle_api_errors</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A decorator to handle API errors in HTTP requests.</span>
+
+<span class="sd">    This decorator wraps around a function that makes HTTP requests using the `requests` library. </span>
+<span class="sd">    It handles various exceptions that can occur during the request process and returns a detailed </span>
+<span class="sd">    error message when an exception is raised.</span>
+
+<span class="sd">    The decorator catches specific exceptions like `HTTPError`, `ConnectionError`, `Timeout`, and </span>
+<span class="sd">    `RequestException`, as well as any other general exceptions, returning a dictionary with error </span>
+<span class="sd">    details instead of allowing the exception to propagate.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        func (function): The function to be decorated, typically one that makes an HTTP request.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        function: A wrapped function that executes the original function and handles exceptions, </span>
+<span class="sd">                  returning a dictionary with error details if an exception occurs.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        &gt;&gt;&gt; @handle_api_errors</span>
+<span class="sd">        &gt;&gt;&gt; def get_data_from_api():</span>
+<span class="sd">        &gt;&gt;&gt;     response = requests.get(&#39;https://api.example.com/data&#39;)</span>
+<span class="sd">        &gt;&gt;&gt;     return response</span>
+<span class="sd">        &gt;&gt;&gt; </span>
+<span class="sd">        &gt;&gt;&gt; response = get_data_from_api()</span>
+<span class="sd">        &gt;&gt;&gt; if &#39;error&#39; in response:</span>
+<span class="sd">        &gt;&gt;&gt;     print(response[&#39;message&#39;])</span>
+<span class="sd">        &gt;&gt;&gt; else:</span>
+<span class="sd">        &gt;&gt;&gt;     print(response.json())</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="c1"># Raise HTTPError if the response indicates an error</span>
+            <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">response</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">http_err</span><span class="p">:</span>
+            <span class="n">status_code</span> <span class="o">=</span> <span class="n">http_err</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="n">HTTP_STATUS_MESSAGES</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">status_code</span><span class="p">,</span> <span class="s2">&quot;An HTTP error occurred.&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;HTTP error occurred&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">,</span>
+                <span class="s2">&quot;status_code&quot;</span><span class="p">:</span> <span class="n">status_code</span><span class="p">,</span>
+                <span class="s2">&quot;details&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">http_err</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectionError</span> <span class="k">as</span> <span class="n">conn_err</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Connection error occurred&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">conn_err</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">Timeout</span> <span class="k">as</span> <span class="n">timeout_err</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Timeout error occurred&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">timeout_err</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RequestException</span> <span class="k">as</span> <span class="n">req_err</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;Request exception occurred&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">req_err</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">general_err</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;An unexpected error occurred&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">general_err</span><span class="p">)</span>
+            <span class="p">}</span>
+    <span class="k">return</span> <span class="n">wrapper</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Spyder Rex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

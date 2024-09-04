@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>court_listener.apis package &mdash; court-listener 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="court_listener package" href="court_listener.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            court-listener
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">court_listener</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="court_listener.html">court_listener package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="court_listener.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">court_listener.apis package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="court_listener.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="court_listener.html#module-court_listener.base">court_listener.base module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="court_listener.html#module-court_listener.error_handling">court_listener.error_handling module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="court_listener.html#module-court_listener">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">court-listener</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">court_listener</a></li>
+          <li class="breadcrumb-item"><a href="court_listener.html">court_listener package</a></li>
+      <li class="breadcrumb-item active">court_listener.apis package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/court_listener.apis.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="court-listener-apis-package">
+<h1>court_listener.apis package<a class="headerlink" href="#court-listener-apis-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-court_listener.apis.PACER_data">
+<span id="court-listener-apis-pacer-data-module"></span><h2>court_listener.apis.PACER_data module<a class="headerlink" href="#module-court_listener.apis.PACER_data" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.PACER_data.PACERData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.PACER_data.</span></span><span class="sig-name descname"><span class="pre">PACERData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/PACER_data.html#PACERData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.PACER_data.PACERData" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s PACER-related endpoints.</p>
+<p>The <cite>PACERData</cite> class inherits from the <cite>CourtListener</cite> base class and provides methods
+to interact with various PACER data endpoints. This class allows users to retrieve
+data from multiple endpoints related to docket entries, recap documents, parties,
+attorneys, and more. The JSON response can be formatted as prettified output based
+on the class constructor settings.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.PACER_data.PACERData.get_attorneys">
+<span class="sig-name descname"><span class="pre">get_attorneys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/PACER_data.html#PACERData.get_attorneys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.PACER_data.PACERData.get_attorneys" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>attorneys</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>attorneys</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the attorneys results. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>attorneys</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pacer_data_client</span> <span class="o">=</span> <span class="n">PACERData</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">pacer_data_client</span><span class="o">.</span><span class="n">get_attorneys</span><span class="p">(</span><span class="n">lawyer_id</span><span class="o">=</span><span class="s2">&quot;xyz789&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.PACER_data.PACERData.get_docket_entries">
+<span class="sig-name descname"><span class="pre">get_docket_entries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/PACER_data.html#PACERData.get_docket_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.PACER_data.PACERData.get_docket_entries" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>docket-entries</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>docket-entries</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the docket entries results. These parameters will be appended to the
+API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>docket-entries</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pacer_data_client</span> <span class="o">=</span> <span class="n">PACERData</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">pacer_data_client</span><span class="o">.</span><span class="n">get_docket_entries</span><span class="p">(</span><span class="n">case_number</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.PACER_data.PACERData.get_fjc_integrated_database">
+<span class="sig-name descname"><span class="pre">get_fjc_integrated_database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/PACER_data.html#PACERData.get_fjc_integrated_database"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.PACER_data.PACERData.get_fjc_integrated_database" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>fjc-integrated-database</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>fjc-integrated-database</cite> endpoint, using any
+provided query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the FJC integrated database results. These parameters will be appended
+to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>fjc-integrated-database</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pacer_data_client</span> <span class="o">=</span> <span class="n">PACERData</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">pacer_data_client</span><span class="o">.</span><span class="n">get_fjc_integrated_database</span><span class="p">(</span><span class="n">database_id</span><span class="o">=</span><span class="s2">&quot;456&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.PACER_data.PACERData.get_originating_court_information">
+<span class="sig-name descname"><span class="pre">get_originating_court_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/PACER_data.html#PACERData.get_originating_court_information"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.PACER_data.PACERData.get_originating_court_information" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>originating-court-information</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>originating-court-information</cite> endpoint,
+using any provided query parameters, and returns the JSON response, which can be
+optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the originating court information results. These parameters will be
+appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>originating-court-information</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pacer_data_client</span> <span class="o">=</span> <span class="n">PACERData</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">pacer_data_client</span><span class="o">.</span><span class="n">get_originating_court_information</span><span class="p">(</span><span class="n">court_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.PACER_data.PACERData.get_parties">
+<span class="sig-name descname"><span class="pre">get_parties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/PACER_data.html#PACERData.get_parties"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.PACER_data.PACERData.get_parties" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>parties</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>parties</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the parties results. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>parties</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pacer_data_client</span> <span class="o">=</span> <span class="n">PACERData</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">pacer_data_client</span><span class="o">.</span><span class="n">get_parties</span><span class="p">(</span><span class="n">case_id</span><span class="o">=</span><span class="s2">&quot;abc123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.PACER_data.PACERData.get_recap_documents">
+<span class="sig-name descname"><span class="pre">get_recap_documents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/PACER_data.html#PACERData.get_recap_documents"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.PACER_data.PACERData.get_recap_documents" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>recap-documents</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>recap-documents</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the recap documents results. These parameters will be appended to the
+API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>recap-documents</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pacer_data_client</span> <span class="o">=</span> <span class="n">PACERData</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">pacer_data_client</span><span class="o">.</span><span class="n">get_recap_documents</span><span class="p">(</span><span class="n">document_id</span><span class="o">=</span><span class="s2">&quot;67890&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.PACER_data.PACERData.get_recap_query">
+<span class="sig-name descname"><span class="pre">get_recap_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/PACER_data.html#PACERData.get_recap_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.PACER_data.PACERData.get_recap_query" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>recap-query</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>recap-query</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the recap query results. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>recap-query</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pacer_data_client</span> <span class="o">=</span> <span class="n">PACERData</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">pacer_data_client</span><span class="o">.</span><span class="n">get_recap_query</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;some_query&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.RECAP">
+<span id="court-listener-apis-recap-module"></span><h2>court_listener.apis.RECAP module<a class="headerlink" href="#module-court_listener.apis.RECAP" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.RECAP.RECAP">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.RECAP.</span></span><span class="sig-name descname"><span class="pre">RECAP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/RECAP.html#RECAP"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.RECAP.RECAP" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s RECAP-related endpoints.</p>
+<p>The <cite>RECAP</cite> class inherits from the <cite>CourtListener</cite> base class and provides methods
+to interact with various RECAP data endpoints. This class allows users to retrieve
+data from endpoints related to RECAP fetch, RECAP data, and RECAP email. The JSON
+response can be formatted as prettified output based on the class constructor settings.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.RECAP.RECAP.get_recap">
+<span class="sig-name descname"><span class="pre">get_recap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/RECAP.html#RECAP.get_recap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.RECAP.RECAP.get_recap" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>recap</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>recap</cite> endpoint, using any provided query
+parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the recap results. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>recap</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">recap_client</span> <span class="o">=</span> <span class="n">RECAP</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">recap_client</span><span class="o">.</span><span class="n">get_recap</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;case_summary&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.RECAP.RECAP.get_recap_email">
+<span class="sig-name descname"><span class="pre">get_recap_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/RECAP.html#RECAP.get_recap_email"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.RECAP.RECAP.get_recap_email" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>recap-email</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>recap-email</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the recap email results. These parameters will be appended to the
+API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>recap-email</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">recap_client</span> <span class="o">=</span> <span class="n">RECAP</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">recap_client</span><span class="o">.</span><span class="n">get_recap_email</span><span class="p">(</span><span class="n">email_id</span><span class="o">=</span><span class="s2">&quot;xyz789&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.RECAP.RECAP.get_recap_fetch">
+<span class="sig-name descname"><span class="pre">get_recap_fetch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/RECAP.html#RECAP.get_recap_fetch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.RECAP.RECAP.get_recap_fetch" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>recap-fetch</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>recap-fetch</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the recap fetch results. These parameters will be appended to the
+API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>recap-fetch</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">recap_client</span> <span class="o">=</span> <span class="n">RECAP</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">recap_client</span><span class="o">.</span><span class="n">get_recap_fetch</span><span class="p">(</span><span class="n">fetch_id</span><span class="o">=</span><span class="s2">&quot;abc123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.alert">
+<span id="court-listener-apis-alert-module"></span><h2>court_listener.apis.alert module<a class="headerlink" href="#module-court_listener.apis.alert" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.alert.Alert">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.alert.</span></span><span class="sig-name descname"><span class="pre">Alert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/alert.html#Alert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.alert.Alert" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s alert endpoints.</p>
+<p>The <cite>Alert</cite> class inherits from the <cite>CourtListener</cite> base class and provides methods to
+interact with the <cite>alerts</cite> and <cite>docket-alerts</cite> endpoints of the CourtListener API.</p>
+<p>It allows users to retrieve data related to alerts and docket alerts, with an option to
+format the output as prettified JSON.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.alert.Alert.get_alerts">
+<span class="sig-name descname"><span class="pre">get_alerts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/alert.html#Alert.get_alerts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.alert.Alert.get_alerts" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>alerts</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>alerts</cite> endpoint, using any provided query
+parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the alerts. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>alerts</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alert_client</span> <span class="o">=</span> <span class="n">Alert</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">alert_client</span><span class="o">.</span><span class="n">get_alerts</span><span class="p">(</span><span class="n">jurisdiction</span><span class="o">=</span><span class="s2">&quot;cal&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.alert.Alert.get_docket_alerts">
+<span class="sig-name descname"><span class="pre">get_docket_alerts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/alert.html#Alert.get_docket_alerts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.alert.Alert.get_docket_alerts" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>docket-alerts</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>docket-alerts</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the docket alerts. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>docket-alerts</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">alert_client</span> <span class="o">=</span> <span class="n">Alert</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">alert_client</span><span class="o">.</span><span class="n">get_docket_alerts</span><span class="p">(</span><span class="n">jurisdiction</span><span class="o">=</span><span class="s2">&quot;cal&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.case_law">
+<span id="court-listener-apis-case-law-module"></span><h2>court_listener.apis.case_law module<a class="headerlink" href="#module-court_listener.apis.case_law" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.case_law.CaseLaw">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.case_law.</span></span><span class="sig-name descname"><span class="pre">CaseLaw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/case_law.html#CaseLaw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.case_law.CaseLaw" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s case law-related endpoints.</p>
+<p>The <cite>CaseLaw</cite> class inherits from the <cite>CourtListener</cite> base class and provides methods
+to interact with various endpoints related to case law, including <cite>dockets</cite>, <cite>clusters</cite>,
+<cite>opinions</cite>, <cite>courts</cite>, <cite>docket-tags</cite>, and <cite>tags</cite>.</p>
+<p>It allows users to retrieve case law data from these endpoints, with an option to
+format the output as prettified JSON.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.case_law.CaseLaw.get_clusters">
+<span class="sig-name descname"><span class="pre">get_clusters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/case_law.html#CaseLaw.get_clusters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.case_law.CaseLaw.get_clusters" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>clusters</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>clusters</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the clusters. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>clusters</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">caselaw_client</span> <span class="o">=</span> <span class="n">CaseLaw</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">caselaw_client</span><span class="o">.</span><span class="n">get_clusters</span><span class="p">(</span><span class="n">jurisdiction</span><span class="o">=</span><span class="s2">&quot;cal&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.case_law.CaseLaw.get_courts">
+<span class="sig-name descname"><span class="pre">get_courts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/case_law.html#CaseLaw.get_courts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.case_law.CaseLaw.get_courts" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>courts</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>courts</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the courts. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>courts</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">caselaw_client</span> <span class="o">=</span> <span class="n">CaseLaw</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">caselaw_client</span><span class="o">.</span><span class="n">get_courts</span><span class="p">(</span><span class="n">jurisdiction</span><span class="o">=</span><span class="s2">&quot;cal&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.case_law.CaseLaw.get_docket_tags">
+<span class="sig-name descname"><span class="pre">get_docket_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/case_law.html#CaseLaw.get_docket_tags"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.case_law.CaseLaw.get_docket_tags" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>docket-tags</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>docket-tags</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the docket tags. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>docket-tags</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">caselaw_client</span> <span class="o">=</span> <span class="n">CaseLaw</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">caselaw_client</span><span class="o">.</span><span class="n">get_docket_tags</span><span class="p">(</span><span class="n">jurisdiction</span><span class="o">=</span><span class="s2">&quot;cal&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.case_law.CaseLaw.get_dockets">
+<span class="sig-name descname"><span class="pre">get_dockets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/case_law.html#CaseLaw.get_dockets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.case_law.CaseLaw.get_dockets" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>dockets</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>dockets</cite> endpoint, using any provided query
+parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the dockets. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>dockets</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">caselaw_client</span> <span class="o">=</span> <span class="n">CaseLaw</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">caselaw_client</span><span class="o">.</span><span class="n">get_dockets</span><span class="p">(</span><span class="n">jurisdiction</span><span class="o">=</span><span class="s2">&quot;cal&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.case_law.CaseLaw.get_opinions">
+<span class="sig-name descname"><span class="pre">get_opinions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/case_law.html#CaseLaw.get_opinions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.case_law.CaseLaw.get_opinions" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>opinions</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>opinions</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the opinions. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>opinions</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">caselaw_client</span> <span class="o">=</span> <span class="n">CaseLaw</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">caselaw_client</span><span class="o">.</span><span class="n">get_opinions</span><span class="p">(</span><span class="n">citation</span><span class="o">=</span><span class="s2">&quot;2024-ABC-123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.case_law.CaseLaw.get_tags">
+<span class="sig-name descname"><span class="pre">get_tags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/case_law.html#CaseLaw.get_tags"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.case_law.CaseLaw.get_tags" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>tags</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>tags</cite> endpoint, using any provided query
+parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the tags. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>tags</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">caselaw_client</span> <span class="o">=</span> <span class="n">CaseLaw</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">caselaw_client</span><span class="o">.</span><span class="n">get_tags</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="s2">&quot;environmental-law&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.citation_lookup">
+<span id="court-listener-apis-citation-lookup-module"></span><h2>court_listener.apis.citation_lookup module<a class="headerlink" href="#module-court_listener.apis.citation_lookup" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.citation_lookup.CitationLookup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.citation_lookup.</span></span><span class="sig-name descname"><span class="pre">CitationLookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/citation_lookup.html#CitationLookup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.citation_lookup.CitationLookup" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s citation lookup endpoint.</p>
+<p>The <cite>CitationLookup</cite> class inherits from the <cite>CourtListener</cite> base class and provides
+a method to interact with the <cite>citation-lookup</cite> endpoint. This class allows users
+to retrieve citation lookup data, with an option to format the output as prettified JSON.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.citation_lookup.CitationLookup.get_citation_lookup">
+<span class="sig-name descname"><span class="pre">get_citation_lookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/citation_lookup.html#CitationLookup.get_citation_lookup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.citation_lookup.CitationLookup.get_citation_lookup" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>citation-lookup</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>citation-lookup</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the citation lookup results. These parameters will be appended to the
+API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>citation-lookup</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">citation_client</span> <span class="o">=</span> <span class="n">CitationLookup</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">citation_client</span><span class="o">.</span><span class="n">get_citation_lookup</span><span class="p">(</span><span class="n">citation</span><span class="o">=</span><span class="s2">&quot;2024-ABC-123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.citation_network">
+<span id="court-listener-apis-citation-network-module"></span><h2>court_listener.apis.citation_network module<a class="headerlink" href="#module-court_listener.apis.citation_network" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.citation_network.CitationNetwork">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.citation_network.</span></span><span class="sig-name descname"><span class="pre">CitationNetwork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/citation_network.html#CitationNetwork"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.citation_network.CitationNetwork" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s citation network endpoints.</p>
+<p>The <cite>CitationNetwork</cite> class inherits from the <cite>CourtListener</cite> base class and provides
+a method to interact with the <cite>opinions-cited</cite> endpoint. This class allows users to
+retrieve data related to opinions cited in the citation network, with an option to
+format the output as prettified JSON.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.citation_network.CitationNetwork.get_opinions_cited">
+<span class="sig-name descname"><span class="pre">get_opinions_cited</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/citation_network.html#CitationNetwork.get_opinions_cited"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.citation_network.CitationNetwork.get_opinions_cited" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>opinions-cited</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>opinions-cited</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the opinions cited results. These parameters will be appended to the
+API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>opinions-cited</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">citation_network_client</span> <span class="o">=</span> <span class="n">CitationNetwork</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">citation_network_client</span><span class="o">.</span><span class="n">get_opinions_cited</span><span class="p">(</span><span class="n">case_id</span><span class="o">=</span><span class="s2">&quot;123456&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.financial_disclosure">
+<span id="court-listener-apis-financial-disclosure-module"></span><h2>court_listener.apis.financial_disclosure module<a class="headerlink" href="#module-court_listener.apis.financial_disclosure" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.financial_disclosure.</span></span><span class="sig-name descname"><span class="pre">FinancialDisclosure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s financial disclosure endpoints.</p>
+<p>The <cite>FinancialDisclosure</cite> class inherits from the <cite>CourtListener</cite> base class and provides
+methods to interact with various financial disclosure-related endpoints. These endpoints
+include financial disclosures, investments, disclosure positions, agreements, non-investment
+incomes, spouse incomes, reimbursements, gifts, and debts. The class allows users to retrieve
+data from these endpoints and format the output as prettified JSON if desired.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_agreements">
+<span class="sig-name descname"><span class="pre">get_agreements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_agreements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_agreements" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>agreements</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the agreements results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>agreements</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_agreements</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_debts">
+<span class="sig-name descname"><span class="pre">get_debts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_debts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_debts" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>debts</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the debts results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>debts</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_debts</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_disclosure_positions">
+<span class="sig-name descname"><span class="pre">get_disclosure_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_disclosure_positions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_disclosure_positions" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>disclosure-positions</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the disclosure positions results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>disclosure-positions</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_disclosure_positions</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_financial_disclosures">
+<span class="sig-name descname"><span class="pre">get_financial_disclosures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_financial_disclosures"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_financial_disclosures" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>financial-disclosures</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>financial-disclosures</cite> endpoint, using any provided
+query parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the financial disclosures results. These parameters will be appended
+to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>financial-disclosures</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">financial_disclosure_client</span> <span class="o">=</span> <span class="n">FinancialDisclosure</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_financial_disclosures</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_gifts">
+<span class="sig-name descname"><span class="pre">get_gifts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_gifts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_gifts" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>gifts</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the gifts results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>gifts</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_gifts</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_investments">
+<span class="sig-name descname"><span class="pre">get_investments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_investments"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_investments" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>investments</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the investments results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>investments</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_investments</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_non_investment_incomes">
+<span class="sig-name descname"><span class="pre">get_non_investment_incomes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_non_investment_incomes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_non_investment_incomes" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>non-investment-incomes</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the non-investment incomes results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>non-investment-incomes</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_non_investment_incomes</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_reimbursements">
+<span class="sig-name descname"><span class="pre">get_reimbursements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_reimbursements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_reimbursements" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>reimbursements</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the reimbursements results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>reimbursements</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_reimbursements</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.financial_disclosure.FinancialDisclosure.get_spouse_incomes">
+<span class="sig-name descname"><span class="pre">get_spouse_incomes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/financial_disclosure.html#FinancialDisclosure.get_spouse_incomes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.financial_disclosure.FinancialDisclosure.get_spouse_incomes" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>spouse-incomes</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the spouse incomes results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>spouse-incomes</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">financial_disclosure_client</span><span class="o">.</span><span class="n">get_spouse_incomes</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.judge">
+<span id="court-listener-apis-judge-module"></span><h2>court_listener.apis.judge module<a class="headerlink" href="#module-court_listener.apis.judge" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.judge.</span></span><span class="sig-name descname"><span class="pre">Judge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s judge-related endpoints.</p>
+<p>The <cite>Judge</cite> class inherits from the <cite>CourtListener</cite> base class and provides methods
+to interact with various endpoints related to judges and their background information.
+These endpoints include people, positions, political affiliations, educations, ABA
+ratings, retention events, sources, disclosure typeahead, and schools. The class
+allows users to retrieve data from these endpoints and format the output as prettified
+JSON if desired.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_aba_ratings">
+<span class="sig-name descname"><span class="pre">get_aba_ratings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_aba_ratings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_aba_ratings" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>aba-ratings</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the ABA ratings results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>aba-ratings</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_aba_ratings</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_disclosure_typeahead">
+<span class="sig-name descname"><span class="pre">get_disclosure_typeahead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_disclosure_typeahead"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_disclosure_typeahead" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>disclosure-typeahead</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the disclosure typeahead results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>disclosure-typeahead</cite></dt><dd><p>endpoint, optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_disclosure_typeahead</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;John&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_educations">
+<span class="sig-name descname"><span class="pre">get_educations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_educations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_educations" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>educations</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the educations results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>educations</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_educations</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_people">
+<span class="sig-name descname"><span class="pre">get_people</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_people"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_people" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>people</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>people</cite> endpoint, using any provided query
+parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the people results. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>people</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">judge_client</span> <span class="o">=</span> <span class="n">Judge</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_people</span><span class="p">(</span><span class="n">last_name</span><span class="o">=</span><span class="s2">&quot;Smith&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_political_affiliations">
+<span class="sig-name descname"><span class="pre">get_political_affiliations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_political_affiliations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_political_affiliations" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>political-affiliations</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the political affiliations results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>political-affiliations</cite></dt><dd><p>endpoint, optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_political_affiliations</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_positions">
+<span class="sig-name descname"><span class="pre">get_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_positions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_positions" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>positions</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the positions results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>positions</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_positions</span><span class="p">(</span><span class="n">court</span><span class="o">=</span><span class="s2">&quot;Supreme Court&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_retention_events">
+<span class="sig-name descname"><span class="pre">get_retention_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_retention_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_retention_events" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>retention-events</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the retention events results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>retention-events</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_retention_events</span><span class="p">(</span><span class="n">judge_id</span><span class="o">=</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_schools">
+<span class="sig-name descname"><span class="pre">get_schools</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_schools"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_schools" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>schools</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the schools results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>schools</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_schools</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Harvard&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.judge.Judge.get_sources">
+<span class="sig-name descname"><span class="pre">get_sources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/judge.html#Judge.get_sources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.judge.Judge.get_sources" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>sources</cite> endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Query parameters to filter the sources results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>sources</cite> endpoint,</dt><dd><p>optionally prettified.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">judge_client</span><span class="o">.</span><span class="n">get_sources</span><span class="p">(</span><span class="n">source_type</span><span class="o">=</span><span class="s2">&quot;Biographical&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.oral_argument">
+<span id="court-listener-apis-oral-argument-module"></span><h2>court_listener.apis.oral_argument module<a class="headerlink" href="#module-court_listener.apis.oral_argument" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.oral_argument.OralArgument">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.oral_argument.</span></span><span class="sig-name descname"><span class="pre">OralArgument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/oral_argument.html#OralArgument"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.oral_argument.OralArgument" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s oral argument-related endpoints.</p>
+<p>The <cite>OralArgument</cite> class inherits from the <cite>CourtListener</cite> base class and provides methods
+to interact with the <cite>audio</cite> endpoint. This class allows users to retrieve data related to
+oral argument audio recordings and format the output as prettified JSON if desired.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.oral_argument.OralArgument.get_audio">
+<span class="sig-name descname"><span class="pre">get_audio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/oral_argument.html#OralArgument.get_audio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.oral_argument.OralArgument.get_audio" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>audio</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>audio</cite> endpoint, using any provided query
+parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the audio results. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>audio</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">oral_argument_client</span> <span class="o">=</span> <span class="n">OralArgument</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">oral_argument_client</span><span class="o">.</span><span class="n">get_audio</span><span class="p">(</span><span class="n">court</span><span class="o">=</span><span class="s2">&quot;ca9&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.search">
+<span id="court-listener-apis-search-module"></span><h2>court_listener.apis.search module<a class="headerlink" href="#module-court_listener.apis.search" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.search.Search">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.search.</span></span><span class="sig-name descname"><span class="pre">Search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/search.html#Search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.search.Search" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s search endpoint.</p>
+<p>The <cite>Search</cite> class inherits from the <cite>CourtListener</cite> base class and provides methods
+to interact with the search endpoint of the CourtListener API. This class allows users
+to retrieve search results based on various query parameters. The JSON response can
+be formatted as prettified output based on the class constructor settings.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.search.Search.get_search">
+<span class="sig-name descname"><span class="pre">get_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/search.html#Search.get_search"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.search.Search.get_search" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>search</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>search</cite> endpoint, using any provided query
+parameters, and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the search results. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>search</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">search_client</span> <span class="o">=</span> <span class="n">Search</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">search_client</span><span class="o">.</span><span class="n">get_search</span><span class="p">(</span><span class="n">query</span><span class="o">=</span><span class="s2">&quot;case law&quot;</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s2">&quot;2023-12-31&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis.visualization">
+<span id="court-listener-apis-visualization-module"></span><h2>court_listener.apis.visualization module<a class="headerlink" href="#module-court_listener.apis.visualization" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="court_listener.apis.visualization.Visualization">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">court_listener.apis.visualization.</span></span><span class="sig-name descname"><span class="pre">Visualization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'https://www.courtlistener.com/api/rest/v3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prettify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/visualization.html#Visualization"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.visualization.Visualization" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="court_listener.html#court_listener.base.CourtListener" title="court_listener.base.CourtListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">CourtListener</span></code></a></p>
+<p>A client class for interacting with the CourtListener API’s visualization endpoints.</p>
+<p>The <cite>Visualization</cite> class inherits from the <cite>CourtListener</cite> base class and provides methods
+to interact with the visualizations endpoints of the CourtListener API. This class allows users
+to retrieve visualization data in different formats based on the provided query parameters.
+The JSON responses can be formatted as prettified output based on the class constructor settings.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.visualization.Visualization.get_visualizations">
+<span class="sig-name descname"><span class="pre">get_visualizations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/visualization.html#Visualization.get_visualizations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.visualization.Visualization.get_visualizations" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>visualizations</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>visualizations</cite> endpoint using any provided query
+parameters and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the visualization results. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>visualizations</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">visualization_client</span> <span class="o">=</span> <span class="n">Visualization</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">visualization_client</span><span class="o">.</span><span class="n">get_visualizations</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">date_range</span><span class="o">=</span><span class="s2">&quot;2023-01-01:2023-12-31&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="court_listener.apis.visualization.Visualization.get_visualizations_json">
+<span class="sig-name descname"><span class="pre">get_visualizations_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/court_listener/apis/visualization.html#Visualization.get_visualizations_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#court_listener.apis.visualization.Visualization.get_visualizations_json" title="Link to this definition"></a></dt>
+<dd><p>Retrieve data from the CourtListener API’s <cite>visualizations/json</cite> endpoint.</p>
+<p>This method sends a GET request to the <cite>visualizations/json</cite> endpoint using any provided
+query parameters and returns the JSON response, which can be optionally prettified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments representing query parameters to filter
+the visualization results in JSON format. These parameters will be appended to the API request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A JSON string representing the response from the <cite>visualizations/json</cite> endpoint,</dt><dd><p>prettified if the <cite>prettify</cite> parameter in the class constructor is set to True.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">visualization_client</span> <span class="o">=</span> <span class="n">Visualization</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your_api_key&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">response</span> <span class="o">=</span> <span class="n">visualization_client</span><span class="o">.</span><span class="n">get_visualizations_json</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">date_range</span><span class="o">=</span><span class="s2">&quot;2023-01-01:2023-12-31&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-court_listener.apis">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-court_listener.apis" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="court_listener.html" class="btn btn-neutral float-left" title="court_listener package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Spyder Rex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

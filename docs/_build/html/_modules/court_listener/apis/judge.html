@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>court_listener.apis.judge &mdash; court-listener 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=d45e8c67"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            court-listener
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">court_listener</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">court-listener</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">court_listener.apis.judge</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for court_listener.apis.judge</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">..base</span> <span class="kn">import</span> <span class="n">CourtListener</span>
+
+<div class="viewcode-block" id="Judge">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge">[docs]</a>
+<span class="k">class</span> <span class="nc">Judge</span><span class="p">(</span><span class="n">CourtListener</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A client class for interacting with the CourtListener API&#39;s judge-related endpoints.</span>
+
+<span class="sd">    The `Judge` class inherits from the `CourtListener` base class and provides methods </span>
+<span class="sd">    to interact with various endpoints related to judges and their background information. </span>
+<span class="sd">    These endpoints include people, positions, political affiliations, educations, ABA </span>
+<span class="sd">    ratings, retention events, sources, disclosure typeahead, and schools. The class </span>
+<span class="sd">    allows users to retrieve data from these endpoints and format the output as prettified </span>
+<span class="sd">    JSON if desired.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Judge.get_people">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_people">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_people</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `people` endpoint.</span>
+
+<span class="sd">        This method sends a GET request to the `people` endpoint, using any provided query </span>
+<span class="sd">        parameters, and returns the JSON response, which can be optionally prettified.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Arbitrary keyword arguments representing query parameters to filter </span>
+<span class="sd">                      the people results. These parameters will be appended to the API request.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `people` endpoint, </span>
+<span class="sd">                 prettified if the `prettify` parameter in the class constructor is set to True.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; judge_client = Judge(api_key=&quot;your_api_key&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_people(last_name=&quot;Smith&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;people&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Judge.get_positions">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_positions">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_positions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `positions` endpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Query parameters to filter the positions results.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `positions` endpoint, </span>
+<span class="sd">                 optionally prettified.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_positions(court=&quot;Supreme Court&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;positions&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Judge.get_political_affiliations">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_political_affiliations">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_political_affiliations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `political-affiliations` endpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Query parameters to filter the political affiliations results.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `political-affiliations` </span>
+<span class="sd">                 endpoint, optionally prettified.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_political_affiliations(judge_id=&quot;123&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;political-affiliations&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Judge.get_educations">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_educations">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_educations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `educations` endpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Query parameters to filter the educations results.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `educations` endpoint, </span>
+<span class="sd">                 optionally prettified.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_educations(judge_id=&quot;123&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;educations&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Judge.get_aba_ratings">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_aba_ratings">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_aba_ratings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `aba-ratings` endpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Query parameters to filter the ABA ratings results.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `aba-ratings` endpoint, </span>
+<span class="sd">                 optionally prettified.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_aba_ratings(judge_id=&quot;123&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;aba-ratings&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Judge.get_retention_events">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_retention_events">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_retention_events</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `retention-events` endpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Query parameters to filter the retention events results.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `retention-events` endpoint, </span>
+<span class="sd">                 optionally prettified.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_retention_events(judge_id=&quot;123&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;retention-events&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Judge.get_sources">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_sources">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_sources</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `sources` endpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Query parameters to filter the sources results.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `sources` endpoint, </span>
+<span class="sd">                 optionally prettified.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_sources(source_type=&quot;Biographical&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;sources&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="Judge.get_disclosure_typeahead">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_disclosure_typeahead">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_disclosure_typeahead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `disclosure-typeahead` endpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Query parameters to filter the disclosure typeahead results.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `disclosure-typeahead` </span>
+<span class="sd">                 endpoint, optionally prettified.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_disclosure_typeahead(query=&quot;John&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;disclosure-typeahead&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Judge.get_schools">
+<a class="viewcode-back" href="../../../court_listener.apis.html#court_listener.apis.judge.Judge.get_schools">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_schools</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve data from the CourtListener API&#39;s `schools` endpoint.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            **params: Query parameters to filter the schools results.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A JSON string representing the response from the `schools` endpoint, </span>
+<span class="sd">                 optionally prettified.</span>
+
+<span class="sd">        Example:</span>
+<span class="sd">            &gt;&gt;&gt; response = judge_client.get_schools(name=&quot;Harvard&quot;)</span>
+<span class="sd">            &gt;&gt;&gt; print(response)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;schools&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pretty_json</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Spyder Rex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

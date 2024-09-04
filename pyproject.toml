@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "court-listener"
+version = "0.0.1"
+description = "A python client for the Court Listener API"
+authors = ["Spyder Rex <billyjohnsonauthor@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/SpyderRex/court-listener"
+repository = "https://github.com/SpyderRex/court-listener"
+license = "MIT"
+keywords = ["API", "requests", "client", "courts", "legal", "law"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.26.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
