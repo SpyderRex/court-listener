@@ -48,4 +48,4 @@ Contributions are welcome! Please submit issues or pull requests on [GitHub](htt
 
 ## Contact
 
-For questions or support, please contact [billyjohnsonauthor@gmail.com](mailto: billyjohnsonauthor@gmail.com).
+For questions or support, please contact [billyjohnsonauthor@gmail.com](mailto:billyjohnsonauthor@gmail.com).
